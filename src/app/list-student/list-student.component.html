@@ -19,7 +19,7 @@
             <td>{{student.firstName}}</td>
             <td>{{student.lastName}}</td>
             <td>{{student.email}}</td>
-            <td>EDIT | <button (click)="delStudent(student._id)">DELETE</button> </td>
+            <td> <a class="btn btn-outline-dark" href="edit-student/{{student._id}}">EDIT</a> | <button class="btn btn-outline-danger" (click)="delStudent(student._id)">DELETE</button> </td>
           </tr>
           
         </tbody>

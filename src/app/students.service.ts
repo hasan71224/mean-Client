@@ -18,7 +18,16 @@ export class StudentsService {
 
   deleteStudent(id:any){
     // console.log("student id:", id);
-
     return this.http.delete(`http://localhost:8080/endpoint/del-student/${id}`);
+  }
+
+  //get data in update student page
+  singleStudent(id:any){
+    return this.http.get(`http://localhost:8080/endpoint/student/${id}`);
+  }
+
+  // update student
+  updateStudent(id:any, student:any){
+    return this.http.put(`http://localhost:8080/endpoint/update-student/${id}`, student);
   }
 }
